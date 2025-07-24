@@ -52,8 +52,8 @@
         <div class="main-content">
             <div class="sticky-nav">
                 <div class="sticky-nav-icons">
-                    <img src="./assets/backward_icon (1).png">
-                    <img src="./assets/forward_iconn.png" class="hide">
+                    <img src="./assets/backward_icon.png">
+                    <img src="./assets/forward_icon.png" class="hide">
                 </div>
                 <div class="sticky-nav-options">
                     <button class="badge nav-item hide">Explore Premium</button>
@@ -120,8 +120,39 @@
                 <div class="line"></div>
             </div>
         </div>
-        <div class="music-player">music-player</div>
     </div>
-    
+    <div class="music-player">
+            <div class="album">
+                <img src="./assets/card1img.jpeg" class="album-art">
+                <div class="album-info">
+                     <p class="song-title">Finding Her</p>
+                     <p class="song-artist">Kishore, Bharath, Saahael</p>
+                 </div>
+                 <i class="fa-brands fa-spotify" style="color: #1ed760; margin-left: 1rem;"></i>
+            </div>    
+            <div class="player">
+                <div class="player-controls">
+                    <img src="/assets/player_icon1.png" class="player-control-icon">
+                    <img src="/assets/player_icon2.png" class="player-control-icon">
+                    <img src="/assets/player_icon3.png" class="player-control-icon" style="opacity:1; height:2rem">
+                    <img src="/assets/player_icon4.png" class="player-control-icon">
+                    <img src="/assets/player_icon5.png" class="player-control-icon">
+
+                </div>
+                <div class="playback-bar">
+                    <span class="curr-time">00:00</span>
+                    <input type="range" min="0" max="100" class="progress-bar" step="1">
+                    <span class="tot-time">3:33</span>
+                </div>
+            </div>
+            <div class="controls">
+                <i class="fa-solid fa-microphone-lines control-icon"></i>
+                <i class="fa-solid fa-list-ul control-icon"></i>
+                <i class="fa-solid fa-desktop control-icon"></i>
+                <i class="fa-solid fa-volume-high control-icon"></i>
+                <input type="range" min="0" max="100" class="volume-slider" step="1">
+                <i class="fa-solid fa-expand control-icon"></i>
+            </div>
+    </div>
 </body>
 </html>
