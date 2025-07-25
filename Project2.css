@@ -346,3 +346,48 @@ a{
     background: #fff;
     border-radius: 50%;
 }
+
+
+/* MOBILE RESPONSIVE          */
+
+@media (max-width: 768px) {
+
+    /* --- Force the main layout into a single column --- */
+    .main {
+        flex-direction: column; /* This is a key change */
+    }
+
+    /* --- Make sidebar and main content full width --- */
+    .sidebar,
+    .main-content {
+        width: 100%; /* Force both sections to take full width */
+    }
+
+    /* --- Prevent horizontal scrolling --- */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* --- Simplify the Music Player --- */
+    .music-player .album {
+        display: none; /* Hide album art to prevent cramping */
+    }
+
+    .music-player .player {
+        width: 100%; /* Allow player controls to use the full width */
+    }
+
+    .music-player .controls {
+        display: none; /* Hide extra controls on mobile */
+    }
+
+    /* --- Adjust Cards for Tapping --- */
+    .cards-container {
+        justify-content: center; /* Center the cards */
+        gap: 1rem; /* Add some space between cards */
+    }
+
+    .card {
+        width: 45%; /* Show two cards side-by-side */
+    }
+}
