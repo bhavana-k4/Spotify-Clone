@@ -348,46 +348,64 @@ a{
 }
 
 
-/* MOBILE RESPONSIVE          */
+/* RESPONSIVE CODE (FOR MOBILE SCREENS)    */
 
 @media (max-width: 768px) {
 
-    /* --- Force the main layout into a single column --- */
-    .main {
-        flex-direction: column; /* This is a key change */
+    /* 1. Shrink the sidebar to an icon-only bar */
+    .sidebar {
+        width: 75px; 
     }
 
-    /* --- Make sidebar and main content full width --- */
-    .sidebar,
-    .main-content {
-        width: 100%; /* Force both sections to take full width */
+    /* 2. Hide the text in the nav/library options, keeping only the icons */
+    .sidebar .nav-option a,
+    .sidebar .lib-option a {
+        display: none;
     }
 
-    /* --- Prevent horizontal scrolling --- */
-    body {
-        overflow-x: hidden;
+    /* 3. Hide the text boxes for "Create Playlist" and "Browse Podcasts" */
+    .sidebar .lib-box {
+        display: none;
+    }
+    
+    /* 4. Make the album art in the music player smaller */
+    .music-player .album-art {
+        height: 45px;
+        width: 45px;
     }
 
-    /* --- Simplify the Music Player --- */
-    .music-player .album {
-        display: none; /* Hide album art to prevent cramping */
+    /* 5. Hide the artist name to save space, but keep the song title */
+    .music-player .song-artist {
+        display: none;
     }
 
-    .music-player .player {
-        width: 100%; /* Allow player controls to use the full width */
-    }
-
-    .music-player .controls {
-        display: none; /* Hide extra controls on mobile */
-    }
-
-    /* --- Adjust Cards for Tapping --- */
-    .cards-container {
-        justify-content: center; /* Center the cards */
-        gap: 1rem; /* Add some space between cards */
-    }
-
+    /* 6. Adjust cards to fit better on a small screen */
     .card {
-        width: 45%; /* Show two cards side-by-side */
+        width: 45%; /* Shows two cards side-by-side */
     }
+}
+
+/* MUSIC PLAYER - MOBILE VIEW         */
+
+@media (max-width: 768px) {
+
+    /* 1. Center the main player controls within the bar */
+    .music-player {
+        justify-content: center;
+    }
+
+    /* 2. Hide the left album info and right volume controls */
+    .music-player .album,
+    .music-player .controls {
+        display: none;
+    }
+
+    /* 3. Allow the center player to take up most of the width */
+    .music-player .player {
+        width: 90%;
+    }
+}
+
+   
+
 }
